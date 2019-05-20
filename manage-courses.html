@@ -1,0 +1,112 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Manage Courses</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/dashboard/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" >
+
+    <!-- Custom styles for this template -->
+    <link href="css/manage-courses.css" rel="stylesheet">
+    <!--fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">IJSE</a>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <span data-feather="home"></span>
+                            Manage Courses <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="manage-batches.html">
+                            <span data-feather="file"></span>
+                            Manage Batches
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="nav-link" href="registration.html">
+                            <span data-feather="shopping-cart"></span>
+                            Register Student
+                        </a>
+
+                </ul>
+
+            </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Manage Courses</h1>
+
+            </div>
+
+            <section>
+                <div class="row">
+                    <div class="col col-12 col-lg-4">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Enter Course ID" id="txtCourseID">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Enter Course Name" id="txtCourseName">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Course Description" id="txtDescription">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Course Duration" id="txtDuration">
+                        </div>
+                        <div class="form-group text-center">
+                            <button class="btn btn-primary" id="btnSave">Save</button>
+                            <button class="btn btn-success" id="btnClear">Clear</button>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-lg-8">
+                        <table class="table table-bordered table-hover" id="tblMCustomer">
+                            <colgroup>
+                                <col style="width: 100px;">
+                                <col>
+                                <col>
+                                <col style="width: 100px;">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Duration</th>
+                                <th>Delete</th>
+                            </tr>
+                            </thead>
+                            <tbody style="cursor: pointer">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script src="js/databaseNew.js"></script>
+<script src="js/manage-courses.js"></script></body>
+
+</html>
