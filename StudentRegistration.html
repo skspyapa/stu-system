@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <style>
+
+        i {
+            padding-right: 10px;
+        }
+
+        li:focus {
+            color: #007bff;
+        }
+
+        col1 {
+            background-color: #491217;
+        }
+
+        #StuIdBtn {
+            width: 500px;
+        }
+
+        #StudentId .dropdown-menu {
+            min-width: 100%;
+        }
+
+        #CourseIdBtn {
+            width: 400px;
+        }
+
+        #BatchIdBtn {
+            width: 400px;
+        }
+
+        #CourseId .dropdown-menu, #BatchId .dropdown-menu {
+
+            min-width: 100%;
+        }
+
+        footer {
+            height: 200px;
+        }
+
+        #btn-submit {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+    <!-- Custom styles for this template -->
+
+    <link rel="stylesheet" href="css/student-registration.css">
+</head>
+<body>
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">IJSE</a>
+
+</nav>
+
+<div class="container-fluid">
+
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="StudentRegistration.html">
+                            <i class="far fa-registered"></i>
+                            <span data-feather="home"></span>
+                            Manage Registration <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+            <div class="row" id="row1">
+                <div class="col">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <h1 class="h2">Manage Registration</h1>
+                        <div class="btn-toolbar mb-2 mb-md-0">
+                            <div class="btn-group mr-2">
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#exampleModal" data-whatever="@mdo" id="AddNewButton"
+                                        onclick="addNewClick()">Add New
+                                </button>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Add Student</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label for="student-id" class="col-form-label">Student
+                                                            ID:</label>
+                                                        <input type="text" class="form-control" id="student-id">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="student-name" class="col-form-label">Student
+                                                            Name:</label>
+                                                        <input class="form-control" id="student-name"
+                                                               onkeypress="studentNamePressed(event)"></input>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="student-contact" class="col-form-label">Student
+                                                            Contact Number:</label>
+                                                        <input class="form-control" id="student-contact"
+                                                               onkeypress="studentContactPressed(event)"></input>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                                <button type="button" class="btn btn-primary" id="SaveBtn"
+                                                        onclick="saveNewClick()" data-dismiss="modal">Save
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--<button type="button" class="btn btn-outline-primary">Remove Order</button>-->
+                                <!--<button type="button" class="btn btn-outline-primary">Update Order</button>-->
+                            </div>
+                            <!--<button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">-->
+                            <!--<span data-feather="calendar"></span>-->
+                            <!--This week-->
+                            <!--</button>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="row2">
+                <div class="col">
+                    <form>
+                        <div class="row">
+                            <div class="col col-sm-9">
+                                <div class="form-group" id="StudentId">
+                                    <label for="StuId" id="lbl-stuId">Select Student ID</label>
+                                    <div class="form-inline">
+                                        <button type="button" class="btn btn-outline-primary" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false" id="StuIdBtn"
+                                                onkeydown="studentId(event)">
+                                            Action
+                                        </button>
+                                        <div class="dropdown-menu" id="StuId">
+
+                                        </div>
+                                    </div>
+                                    <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                                </div>
+                            </div>
+                            <div class="col col-sm-3"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col col-sm-12">
+                                <div class="form-group">
+                                    <label for="StuName">Student Name</label>
+                                    <input type="text" class="form-control" id="StuName" placeholder="Student Name">
+                                    <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+                        <div class="row">
+                            <div class="col col-12 col-sm-6">
+                                <div class="form-group" id="CourseId">
+                                    <label for="CouId" id="lbl-couId">Course</label>
+                                    <div class="form-inline">
+                                        <button type="button" class="btn btn-outline-primary" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false" id="CourseIdBtn"
+                                                onkeydown="itemCode(event)">
+                                            Action
+                                        </button>
+                                        <div class="dropdown-menu" id="CouId">
+
+                                        </div>
+                                    </div>
+                                    <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                                </div>
+                            </div>
+                            <div class="col col-sm-6">
+                                <div class="form-group">
+                                    <label for="CouName">Course Name</label>
+                                    <input type="text" class="form-control" id="CouName" placeholder="Course Name"
+                                           onkeydown="courseName(event)">
+                                    <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" id="form-row">
+                            <div class="col col-12 col-sm-6">
+                                <div class="form-group" id="BatchId">
+                                    <label for="BatId" id="lbl-batId">Batch</label>
+                                    <div class="form-inline">
+                                        <button type="button" class="btn btn-outline-primary" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false" id="BatchIdBtn"
+                                                onkeydown="itemCode(event)">
+                                            Action
+                                        </button>
+                                        <div class="dropdown-menu" id="BatId">
+
+                                        </div>
+                                    </div>
+                                    <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                                </div>
+                            </div>
+                            <div class="col col-sm-6">
+                                <div class="form-group">
+                                    <label for="BatchName">Batch Name</label>
+                                    <input type="text" class="form-control" id="BatchName" placeholder="Batch Name"
+                                           onkeydown="batchName(event)">
+                                    <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                                </div>
+                            </div>
+
+                        </div>
+                        <hr>
+                        <div class="form-group" id="btn-submit">
+                            <button type="button" class="btn btn-outline-primary" id="BtnSave" onclick="addNewReg()">
+                                Add
+                            </button>
+                        </div>
+                        <hr>
+                    </form>
+                </div>
+            </div>
+            <div class="row" id="row3">
+                <div class="col">
+                    <table class="table" id="reg-data">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Course ID</th>
+                            <th scope="col">Course Name</th>
+                            <th scope="col">Batch ID</th>
+                            <th scope="col">Batch Name</th>
+                            <!--<th scope="col">Delete</th>-->
+
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <footer class="modal-footer"></footer>
+</div>
+</body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/database.js"></script>
+<script src="js/StudentRegistration.js"></script>
+</html>

@@ -105,21 +105,6 @@ body {
     box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
 }
 
-.invalid{
-    border-color: red;
-}
-
-.invalid:focus{
-    border-color: red;
-}
-
-.deleteIcon:hover{
-    color: red;
-}
-
-#cmbCourseId {
-    cursor: pointer;
-}
 #reg-data tbody tr td:last-child button{
     background-image: url("../img/trash-solid.svg");
     background-size: contain;
