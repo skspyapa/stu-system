@@ -4,35 +4,23 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
     <title>Manage Batches</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/dashboard/">
+
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" >
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/manage-customer.css">
-    <style>
 
-        i{
-            padding-right: 10px;
-        }
-        form span{
-            padding-right: 50px;
-        }
-        .btn-danger{
-            width: 400px;
-        }
-        .form-group{
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
-    </style>
     <!-- Custom styles for this template -->
-
-    <link rel="stylesheet" href="css/manage-batches.css">
+    <link href="css/manage-batches.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" >
 </head>
 <body>
 <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
     <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">IJSE</a>
-
 </nav>
 
 <div class="container-fluid">
@@ -41,119 +29,84 @@
             <div class="sidebar-sticky">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link " href="manage-batches.html">
-                            <i class="fas fa-tachometer-alt"></i>
+                        <a class="nav-link" href="#">
                             <span data-feather="home"></span>
-                            Manage Course <span class="sr-only">(current)</span>
+                            Manage Courses
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="">
-                            <i class="fas fa-user-friends"></i>
+                        <a class="nav-link active" href="#">
                             <span data-feather="file"></span>
-                            Manage Batch
+                            Manage Batches<span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="">
-                            <i class="fas fa-cookie-bite"></i>
+                        <a class="nav-link" href="#">
                             <span data-feather="shopping-cart"></span>
-                            Manage Registration
+                            Register Student
                         </a>
-                    </li>
+
                 </ul>
+
             </div>
         </nav>
 
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4" >
-            <div class="row" id="row1">
-                <div class="col">
-                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom" >
-                        <h1 class="h2">Manage Batch</h1>
-                        <div class="btn-toolbar mb-2 mb-md-0">
-                            <div class="btn-group mr-2">
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Manage Batches</h1>
 
-                            </div>
-                            <!--<button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">-->
-                                <!--<span data-feather="calendar"></span>-->
-                                <!--This week-->
-                            <!--</button>-->
+            </div>
+
+            <section>
+                <div class="row">
+                    <div class="col col-12 col-lg-4">
+                        <div class="form-group">
+                            <select class="form-control" id="cmbCourseId">
+                                <option value="" disabled selected hidden>select Course ID..</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Course Name" id="txtCourseName">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Enter Batch ID" id="txtBachId">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Enter Batch Name" id="txtBatchName">
+                        </div>
+                        <div class="form-group text-center">
+                            <button class="btn btn-primary" id="btnSave">Save</button>
+                            <button class="btn btn-success" id="btnClear">Clear</button>
                         </div>
                     </div>
+                    <div class="col col-12 col-lg-8">
+                        <table class="table table-bordered table-hover" id="tblMBatches">
+                            <colgroup>
+                                <col style="width: 100px;">
+                                <col>
+                                <col>
+                                <col style="width: 100px;">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th>Batch ID</th>
+                                <th>Batch Name</th>
+                                <th>Course ID</th>
+                                <th>Course Name</th>
+                                <th>Delete</th>
+                            </tr>
+                            </thead>
+                            <tbody style="cursor: pointer">
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
-            <div class="row" id="row2">
-                <div class="col">
-                    <form>
-                        <span>Select Course </span>
-                        <span><div class="btn-group">
-                            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Action
-                            </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Separated link</a>
-                            </div>
-                        </div></span>
-                        <div class="form-group">
-                            <label for="name">Course Name</label>
-                            <input type="text" class="form-control" id="name"  placeholder="Course Name" >
-                            <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
-                        </div>
-                        <span>Batch ID </span>
-                        <span><div class="btn-group">
-                            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Action
-                            </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Separated link</a>
-                            </div>
-                        </div></span>
-                        <div class="form-group">
-                            <label for="address">Batch Name</label>
-                            <input type="text" class="form-control" id="address"  placeholder="Batch Name" >
-                            <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
-                        </div>
-                        <div class="form-group" id="btn-submit">
-                            <button type="button" class="btn btn-outline-primary" id="btn-save">Save</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="row" id="row3">
-                <div class="col" id="col-table">
-                    <table class="table" id="tbl-customer">
-                        <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Duration</th>
-                        </tr>
-                        </thead>
-                        <tbody>
+            </section>
 
-                        </tbody>
-                    </table>
-
-
-                </div>
-            </div>
         </main>
     </div>
-    <footer class="modal-footer"></footer>
 </div>
-</body>
 <script src="js/jquery-3.4.1.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/database.js"></script>
-<script src="js/manage-batches.js"></script>
+<script src="js/databaseNew.js"></script>
+<script src="js/manage-batches.js"></script></body>
 </html>
