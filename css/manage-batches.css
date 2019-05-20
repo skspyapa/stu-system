@@ -104,3 +104,24 @@ body {
     border-color: transparent;
     box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
 }
+
+#i{
+
+}
+#btn-submit{
+    padding: 20px;
+}
+#col-table{
+    padding: 10px;
+}
+#tbl-customer tbody tr td:last-child button{
+    background-image: url("../img/trash-solid.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 15px;
+    height: 20px;
+}
+#tbl-customer tbody tr td:last-child button:active{
+    background-color: #1a2c51;
+}
