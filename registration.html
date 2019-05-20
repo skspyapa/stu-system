@@ -1,0 +1,163 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Dashboard Template · Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/dashboard/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" >
+
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">IJSE</a>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <span data-feather="home"></span>
+                            Manage Courses
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="manage-batches.html">
+                            <span data-feather="file"></span>
+                            Manage Batches
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <span data-feather="shopping-cart"></span>
+                            Register Student<span class="sr-only">(current)</span>
+                        </a>
+
+                </ul>
+
+            </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Registration</h1>
+
+            </div>
+            <form>
+                <div class="form-row">
+                    <label for="studentID" class="col-sm-2 col-form-label">Student ID</label>
+                    <div class="col-sm-8">
+                        <select id="studentID" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-sm-2">
+                        <button type="button" class="btn btn-primary">+Add New</button>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="studentName" class="col-sm-2 col-form-label">Student Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="studentName" >
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-2">
+                        <label class="col-form-label">Course</label>
+                    </div>
+                    <div class="col-4">
+                        <select id="courseID" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-2">
+                        <label class="col-form-label">Course Name</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col-2">
+                        <label class="col-form-label">Batch</label>
+                    </div>
+                    <div class="col-4">
+                        <select id="batchID" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-2">
+                        <label class="col-form-label">Batch Name</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <!--<div class="form-row">-->
+                <!--<div class="form-group col-md-6">-->
+                <!--<label for="inputCity">City</label>-->
+                <!--<input type="text" class="form-control" id="inputCity">-->
+                <!--</div>-->
+                <!--<div class="form-group col-md-4">-->
+                <!--<label for="inputState">State</label>-->
+                <!--<select id="inputState" class="form-control">-->
+                <!--<option selected>Choose...</option>-->
+                <!--<option>...</option>-->
+                <!--</select>-->
+                <!--</div>-->
+                <!--<div class="form-group col-md-2">-->
+                <!--<label for="inputZip">Zip</label>-->
+                <!--<input type="text" class="form-control" id="inputZip">-->
+                <!--</div>-->
+                <!--</div>-->
+                <br>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+            <br>
+
+
+            <table class="table">
+                <thead class="thead-light">
+                <tr>
+                    <th scope="col">Student ID</th>
+                    <th scope="col">Course ID</th>
+                    <th scope="col">Course Name</th>
+                    <th scope="col">Batch ID</th>
+                    <th scope="col">Batch Name</th>
+                    <th scope="col">Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">S001</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                    <td><i class="fas fa-trash-alt"></i></td>
+                </tr>
+
+                </tbody>
+            </table>
+        </main>
+    </div>
+</div>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/registration.js"></script></body>
+</html>
