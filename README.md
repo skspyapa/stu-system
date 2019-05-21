@@ -4,3 +4,7 @@ This project developed to get a real world experience in developing software app
 <br/>
 <br/>
 Any Database is not used in the project Data is stored in the memory so that data is only available at the executing time of the Application. 
+<br/>
+<br/>
+## Main Features of the project
+<br/>
