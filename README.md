@@ -11,6 +11,5 @@ Any Database is not used in the project Data is stored in the memory so that dat
 <br/>
 **Main Features of the project**
 <br/>
-<br/>
-* item 1
+* Managing courses-Here, Authorized user can add courses for pre-defined course id, course name, course description, & course duration.
 * item 2
