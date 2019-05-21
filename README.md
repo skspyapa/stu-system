@@ -16,6 +16,6 @@ Any Database is not used in the project Data is stored in the memory so that dat
 * Managing Regisration -Authorized person can register a existing student or add new student for registration, user should choose student id, automtically student name generated, course id, automatically course name generated, batch id, automatically generated the batch name also one student can register more than one course.
 <br/>
 <br/>
-## Course Page
+# Course Page
 <br/>
 
