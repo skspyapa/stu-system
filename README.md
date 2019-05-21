@@ -18,4 +18,4 @@ Any Database is not used in the project Data is stored in the memory so that dat
 <br/>
 **Course Page**
 <br/>
-![GitHub Logo](/img/Screenshot (2).png)
+
