@@ -11,3 +11,6 @@ Any Database is not used in the project Data is stored in the memory so that dat
 <br/>
 **Main Features of the project**
 <br/>
+<br/>
+* item 1
+* item 2
